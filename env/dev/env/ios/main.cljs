@@ -1,6 +1,6 @@
  (ns ^:figwheel-no-load env.ios.main
   (:require [reagent.core :as r]
-            [exp-cljstest.ios.core :as core]
+            [exp-cljstest.core :as core]
             [figwheel.client :as figwheel :include-macros true]))
 
  (enable-console-print!)

@@ -1,4 +1,4 @@
-(ns exp-cljstest.android.core
+(ns exp-cljstest.core
   (:require [reagent.core :as r :refer [atom]]
             [re-frame.core :refer [subscribe dispatch dispatch-sync]]
             [exp-cljstest.handlers]

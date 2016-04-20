@@ -1,6 +1,6 @@
  (ns ^:figwheel-no-load env.android.main
   (:require [reagent.core :as r]
-            [exp-cljstest.android.core :as core]
+            [exp-cljstest.core :as core]
             [figwheel.client :as figwheel :include-macros true]))
 
  (enable-console-print!)
