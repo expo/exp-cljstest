@@ -52,6 +52,9 @@ var figwheelApp = function (platform, devHost) {
         componentDidMount: function () {
             var app = this;
             if (typeof goog === "undefined") {
+                hostPort = this.props.url.split('/')[2].split(':');
+                devHost = hostPort[0];
+                config.serverPort = hostPort[1];
                 loadApp(platform, devHost, function (appRoot) {
                     app.setState({root: appRoot, loaded: true})
                 });
