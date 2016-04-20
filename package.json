@@ -1,12 +1,17 @@
 {
   "name": "ExpCLJSTest",
   "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "start": "node_modules/react-native/packager/packager.sh --nonPersistent"
+  "description": "Exponent + ClojureScript!",
+  "main": "index.ios.js",
+  "author": null,
+  "exp": {
+    "name": "ExpCLJSTest",
+    "appKey": "ExpCLJSTest",
+    "orientation": "portrait",
+    "sdkVersion": "5.0.0"
   },
   "dependencies": {
-    "react": "^0.14.8",
-    "react-native": "0.23.1"
+    "react": "^0.14.7",
+    "react-native": "github:exponentjs/react-native#2016-04-07"
   }
 }
