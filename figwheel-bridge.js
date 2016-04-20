@@ -188,13 +188,13 @@ function setCorrectWebSocketImpl() {
 
 function loadApp(platform, devHost, onLoadCb) {
     serverHost = devHost;
-    fileBasePath = config.basePath + platform;
+    fileBasePath = config.basePath;
 
     // callback when app is ready to get the reloadable component
-    var mainJs = '/env/' + platform + '/main.js';
+    var mainJs = '/env/main.js';
     evalListeners.push(function (url) {
         if (url.indexOf(mainJs) > -1) {
-            onLoadCb(env[platform].main.root_el);
+            onLoadCb(env.main.root_el);
             console.info('Done loading Clojure app');
         }
     });
