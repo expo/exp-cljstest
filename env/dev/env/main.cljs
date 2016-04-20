@@ -1,9 +1,9 @@
- (ns ^:figwheel-no-load env.android.main
+(ns ^:figwheel-no-load env.main
   (:require [reagent.core :as r]
             [exp-cljstest.core :as core]
             [figwheel.client :as figwheel :include-macros true]))
 
- (enable-console-print!)
+(enable-console-print!)
 
 (def cnt (r/atom 0))
 (defn reloader [] @cnt [core/app-root])
