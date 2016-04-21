@@ -15,3 +15,5 @@ npm-debug.log
 #
 target/
 figwheel_server.log
+.lein-repl-history
+.nrepl-port
