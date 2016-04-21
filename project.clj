@@ -13,7 +13,7 @@
             [lein-figwheel "0.5.0-6"]
             [cider/cider-nrepl "0.12.0"]
             [refactor-nrepl "2.0.0-SNAPSHOT"]]
-  :clean-targets ["target/" "index.js"]
+  :clean-targets ["target/"]
   :aliases {"prod-build" ^{:doc "Recompile code with prod profile."}
             ["do" "clean"
              ["with-profile" "prod" "cljsbuild" "once" "main"]]}
@@ -21,13 +21,13 @@
                    :source-paths ["src" "env/dev"]
                    :cljsbuild    {:builds {:main {:source-paths ["src" "env/dev"]
                                                   :figwheel     true
-                                                  :compiler     {:output-to     "target/not-used.js"
+                                                  :compiler     {:output-to     "target/index.js"
                                                                  :main          "env.main"
                                                                  :output-dir    "target"
                                                                  :optimizations :none}}}}
                    :repl-options {:nrepl-middleware [cemerick.piggieback/wrap-cljs-repl]}}
              :prod {:cljsbuild {:builds {:main {:source-paths ["src" "env/prod"]
-                                                :compiler     {:output-to     "index.js"
+                                                :compiler     {:output-to     "target/index.js"
                                                                :main          "env.main"
                                                                :output-dir    "target"
                                                                :optimizations :simple}}}}}}
