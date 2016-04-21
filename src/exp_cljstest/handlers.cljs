@@ -1,8 +1,8 @@
 (ns exp-cljstest.handlers
   (:require
-    [re-frame.core :refer [register-handler after]]
-    [schema.core :as s :include-macros true]
-    [exp-cljstest.db :refer [app-db schema]]))
+   [re-frame.core :refer [register-handler after]]
+   [schema.core :as s :include-macros true]
+   [exp-cljstest.db :refer [app-db schema]]))
 
 ;; -- Middleware ------------------------------------------------------------
 ;;
@@ -11,8 +11,8 @@
 (defn check-and-throw
   "throw an exception if db doesn't match the schema."
   [a-schema db]
-    (if-let [problems (s/check a-schema db)]
-      (throw (js/Error. (str "schema check failed: " problems)))))
+  (if-let [problems (s/check a-schema db)]
+    (throw (js/Error. (str "schema check failed: " problems)))))
 
 (def validate-schema-mw
   (after (partial check-and-throw schema)))
@@ -20,13 +20,13 @@
 ;; -- Handlers --------------------------------------------------------------
 
 (register-handler
-  :initialize-db
-  validate-schema-mw
-  (fn [_ _]
-    app-db))
+ :initialize-db
+ validate-schema-mw
+ (fn [_ _]
+   app-db))
 
 (register-handler
-  :set-greeting
-  validate-schema-mw
-  (fn [db [_ value]]
-    (assoc db :greeting value)))
+ :set-greeting
+ validate-schema-mw
+ (fn [db [_ value]]
+   (assoc db :greeting value)))

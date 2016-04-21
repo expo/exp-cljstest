@@ -13,7 +13,7 @@
 (def touchable-highlight (r/adapt-react-class (.-TouchableHighlight js/React)))
 
 (defn alert [title]
-      (.alert (.-Alert js/React) title))
+  (.alert (.-Alert js/React) title))
 
 (defn app-root []
   (let [greeting (subscribe [:get-greeting])]
@@ -25,5 +25,5 @@
         [text {:style {:color "white" :text-align "center" :font-weight "bold"}} "press me"]]])))
 
 (defn init []
-      (dispatch-sync [:initialize-db])
-      (.registerComponent app-registry "main" #(r/reactify-component app-root)))
+  (dispatch-sync [:initialize-db])
+  (.registerComponent app-registry "main" #(r/reactify-component app-root)))
