@@ -3,10 +3,17 @@ ideas
 
 - make a floaty plane with this
 
+- record a video of making floaty plane with this
+
 
 todo
 ----
 
+- make a better build structure (write all gen'd js to target/, put hand-written
+  js in js/, write better js launcher stub)
+
 - make `lein figwheel main` save figwheel server URL somewhere for
   `env/dev/env/main.cljs` to pick up
+
+- make it automatically pickup whether to run figwheel or prod version
 
