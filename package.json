@@ -7,7 +7,10 @@
   "exp": {
     "name": "ExpCLJSTest",
     "orientation": "portrait",
-    "sdkVersion": "5.0.0"
+    "sdkVersion": "5.0.0",
+    "packagerOpts": {
+      "nonPersistent": ""
+    }
   },
   "eslintConfig": {
     "extends": "exponent/react",
