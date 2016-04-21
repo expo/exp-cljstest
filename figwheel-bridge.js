@@ -54,7 +54,7 @@ var figwheelApp = function (platform, devHost) {
             if (typeof goog === "undefined") {
                 var url = this.props.url ||
                           this.props.exp.manifest.bundleUrl;
-                hostPort = url.split('/')[2].split(':');
+                var hostPort = url.split('/')[2].split(':');
                 devHost = hostPort[0];
                 config.serverPort = hostPort[1];
                 loadApp(platform, devHost, function (appRoot) {
