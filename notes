@@ -1,0 +1,12 @@
+ideas
+-----
+
+- make a floaty plane with this
+
+
+todo
+----
+
+- make `lein figwheel main` save figwheel server URL somewhere for
+  `env/dev/env/main.cljs` to pick up
+
