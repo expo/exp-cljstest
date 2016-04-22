@@ -22,7 +22,7 @@
                    :source-paths ["src" "env/dev"]
                    :cljsbuild    {:builds {:main {:source-paths ["src" "env/dev"]
                                                   :figwheel     true
-                                                  :compiler     {:output-to     "target/index.js"
+                                                  :compiler     {:output-to     "target/unused.js"
                                                                  :main          "env.main"
                                                                  :output-dir    "target"
                                                                  :optimizations :none}}}}

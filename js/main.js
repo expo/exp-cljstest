@@ -1,14 +1,8 @@
 'use strict';
 
-const figwheel = true;
-
-if (figwheel) {
-  require('figwheel-bridge').withModules({
-    'dev-env': require('../target/dev-env.js'),
-
-    'react-native': require('react-native'),
-    'react': require('react'),
-  }).start('main');
-} else {
-  require('../target/index.js');
-}
+// cljsbuild adds a preamble mentioning goog so hack around it
+window.goog = {
+  provide() {},
+  require() {},
+};
+require('../target/index.js');
