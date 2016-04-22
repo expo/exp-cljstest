@@ -9,8 +9,10 @@
 (defn reloader [] @cnt [core/app-root])
 (def root-el (r/as-element [reloader]))
 
+(def dev-env (js/require "dev-env"))
+
 (figwheel/watch-and-reload
- :websocket-url "ws://c98fe99d.ngrok.io/figwheel-ws"
+ :websocket-url (str "ws://" (.-ip dev-env) ":3449/figwheel-ws")
  :heads-up-display false
  :jsload-callback #(swap! cnt inc))
 
