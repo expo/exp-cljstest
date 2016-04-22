@@ -8,5 +8,5 @@ if (figwheel) {
     'react': require('react'),
   }).start('main');
 } else {
-  require('./target/index.js');
+  require('../target/index.js');
 }

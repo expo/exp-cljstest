@@ -9,6 +9,7 @@
     "orientation": "portrait",
     "sdkVersion": "5.0.0",
     "packagerOpts": {
+      "root": "js",
       "nonPersistent": ""
     }
   },
